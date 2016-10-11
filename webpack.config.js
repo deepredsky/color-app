@@ -14,5 +14,10 @@ module.exports = {
       { test: /\.jsx$/, loaders: ['jsx-loader', "babel-loader?stage=0"] }
     ]
   },
-  plugins: []
+  plugins: [
+    new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+    })
+  ]
 };
